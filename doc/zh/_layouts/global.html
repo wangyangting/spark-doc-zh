@@ -7,14 +7,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }} - Spark {{site.SPARK_VERSION_SHORT}} 官方文档中文版 - ApacheCN</title>
-        {% if page.keywords %}
-          <meta name="keywords" content="{{page.keywords | replace: 'SPARK_VERSION_SHORT', site.SPARK_VERSION_SHORT}}, ApacheCN">
-        {% endif %}
+        <title>{{ page.title }} - Spark 2.2.0 中文文档 - Spark {{site.SPARK_VERSION_SHORT}} 官方文档中文版 - ApacheCN</title>
+        
+        <meta name="keywords" content="Spark 中文文档, Spark 官方文档中文版, {{page.keywords | replace: 'SPARK_VERSION_SHORT', site.SPARK_VERSION_SHORT}}, ApacheCN">
 
-        {% if page.description %}
-          <meta name="description" content="{{page.description | replace: 'SPARK_VERSION_SHORT', site.SPARK_VERSION_SHORT}} - ApacheCN">
-        {% endif %}
+        <meta name="description" content="Spark 中文文档 - Spark 官方文档中文版 - {{page.description | replace: 'SPARK_VERSION_SHORT', site.SPARK_VERSION_SHORT}} - ApacheCN">
 
         {% if page.redirect %}
           <meta http-equiv="refresh" content="0; url={{page.redirect}}">
@@ -35,10 +32,9 @@
         <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
 
         <link rel="stylesheet" href="css/pygments-default.css">
-
-        <!-- <link rel="stylesheet" href="../css/fonts/font-awesome.css"> -->
-        <link rel="stylesheet" href="../css/fonts/apachecn-menu-style.css" type="text/css" />
-        <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="css/fonts/font-awesome.css">
+        <link rel="stylesheet" href="css/fonts/apachecn-menu-style.css" type="text/css" />
+        <!-- <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css"> -->
 
         {% production %}
         <!-- Google analytics script -->
@@ -66,37 +62,66 @@
         <div class="spark-top__nav" id="apachecn-spark-menu">
             <div class="nav nav-apachecn">
                 <div class="container">
-                    <a href="javascript:;" class="nav-item">
-                        <label  class="animate">Menu1<i class="fa fa-bars float-right"></i></label>
-                        <ul class="nav-itme__list animate">
-                            <li href="javascript:;" class="animate">Code </li>
-                            <li href="javascript:;"  class="animate">Zoom </li>
-                            <li href="javascript:;"  class="animate">Settings</li>
-                        </ul>
-                    </a>
+                    <div class="nav-item nav-logo">
+                        <a href="http://www.apachecn.org"><img src="img/apachecn-logo.png"></a>
+                    </div>
 
-                    <a href="javascript:;" class="nav-item">
-                        <label  class="animate">Menu1<i class="fa fa-bars float-right"></i></label>
+                    <div class="nav-item">
+                        <label  class="animate">中文文档<i class="fa fa-chevron-down float-right"></i></label>
                         <ul class="nav-itme__list animate">
-                            <li href="javascript:;" class="animate second-level">
-                                <label  class="animate">Menu1 22222 <i class="fa fa-chevron-right"></i></label>
+                            <li class="animate second-level">
+                                <label  class="animate">TensorFlow<i class="fa fa-chevron-right"></i></label>
                                 <ul class="nav-itme__list animate">
-                                <li href="javascript:;" class="animate">111 </li>
-                                <li href="javascript:;"  class="animate">222 </li>
-                                <li href="javascript:;"  class="animate">333</li>
-                            </ul>
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=10030122">TensorFlow R1.2 中文文档</a></li>
+                                </ul>
                             </li>
-                            <li href="javascript:;" class="animate second-level">
-                                <label  class="animate">Menu1 333 <i class="fa fa-chevron-right"></i></label>
+                            <li class="animate second-level">
+                                <label  class="animate">sklearn<i class="fa fa-chevron-right"></i></label>
                                 <ul class="nav-itme__list animate">
-                                <li href="javascript:;" class="animate">111 </li>
-                                <li href="javascript:;"  class="animate">222 </li>
-                                <li href="javascript:;"  class="animate">333</li>
-                            </ul>
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=10030181">sklearn 0.18 中文文档</a></li>
+                                </ul>
                             </li>
-                            <li href="javascript:;"  class="animate">2222</li>
+                            <li class="animate second-level">
+                                <label  class="animate">Apache Spark<i class="fa fa-chevron-right"></i></label>
+                                <ul class="nav-itme__list animate">
+                                    <li class="animate"><a href="//spark.apachecn.org/docs/cn/2.2.0/">Spark 2.2.0 中文文档</a></li>
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=2883613">Spark 2.0.2 中文文档</a></li>
+                                </ul>
+                            </li>
+                            <li class="animate second-level">
+                                <label  class="animate">Apache Kudu<i class="fa fa-chevron-right"></i></label>
+                                <ul class="nav-itme__list animate">
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=10813594">Kudu 1.4.0 中文文档</a></li>
+                                </ul>
+                            </li>
+                            <li class="animate second-level">
+                                <label  class="animate">Apache Zeppelin<i class="fa fa-chevron-right"></i></label>
+                                <ul class="nav-itme__list animate">
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=10030467">Zeppelin 0.7.2 中文文档</a></li>
+                                </ul>
+                            </li>
+                            <li class="animate second-level">
+                                <label  class="animate">Elastic Elasticsearch<i class="fa fa-chevron-right"></i></label>
+                                <ul class="nav-itme__list animate">
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=4260364">Elasticsearch 5.4 中文文档</a></li>
+                                </ul>
+                            </li>
+                            <li class="animate second-level">
+                                <label  class="animate">Elastic Kibana<i class="fa fa-chevron-right"></i></label>
+                                <ul class="nav-itme__list animate">
+                                    <li class="animate"><a href="//cwiki.apachecn.org/pages/viewpage.action?pageId=8159377">Kibana 5.2 中文文档</a></li>
+                                </ul>
+                            </li>
                         </ul>
-                    </a>
+                    </div>
+
+                    <div class="nav-item">
+                        <label  class="animate">关注我们<i class="fa fa-chevron-down float-right"></i></label>
+                        <ul class="nav-itme__list animate">
+                            <li class="animate"><a href="//github.com/apachecn">GitHub</a></li>
+                            <li class="animate"><a href="//i.youku.com/apachecn">优酷视频</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -108,10 +133,10 @@
                         </div>
                         <ul class="nav">
                             <!--TODO(andyk): Add class="active" attribute to li some how.-->
-                            <li><a href="index.html">概述</a></li>
+                            <li><a href="index.html">&nbsp;&nbsp;概述&nbsp;&nbsp;</a></li>
 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">编程指南<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;编程指南&nbsp;&nbsp;<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="quick-start.html">快速入门</a></li>
                                     <li><a href="rdd-programming-guide.html">Spark 编程指南</a></li>
@@ -128,15 +153,15 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">API Docs<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="api/scala/index.html#org.apache.spark.package">Scala</a></li>
-                                    <li><a href="api/java/index.html">Java</a></li>
-                                    <li><a href="api/python/index.html">Python</a></li>
-                                    <li><a href="api/R/index.html">R</a></li>
+                                    <li><a href="//spark.apache.org/docs/2.2.0/api/scala/index.html#org.apache.spark.package">Scala</a></li>
+                                    <li><a href="//spark.apache.org/docs/2.2.0/api/java/index.html">Java</a></li>
+                                    <li><a href="//spark.apache.org/docs/2.2.0/api/python/index.html">Python</a></li>
+                                    <li><a href="//spark.apache.org/docs/2.2.0/api/R/index.html">R</a></li>
                                 </ul>
                             </li>
 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">部署<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;部署&nbsp;&nbsp;<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="cluster-overview.html">概述</a></li>
                                     <li><a href="submitting-applications.html">提交应用</a></li>
@@ -148,7 +173,7 @@
                             </li>
 
                             <li class="dropdown">
-                                <a href="api.html" class="dropdown-toggle" data-toggle="dropdown">更多<b class="caret"></b></a>
+                                <a href="api.html" class="dropdown-toggle" data-toggle="dropdown">&nbsp;&nbsp;更多&nbsp;&nbsp;<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="configuration.html">配置</a></li>
                                     <li><a href="monitoring.html">监控</a></li>
@@ -161,6 +186,23 @@
                                     <li><a href="http://spark.apache.org/contributing.html">给 Spark 贡献</a></li>
                                     <li><a href="http://spark.apache.org/third-party-projects.html">第三方项目</a></li>
                                 </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="timeline.html">时光轴</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="api.html" class="dropdown-toggle" data-toggle="dropdown">发现错误？&nbsp;&nbsp;<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="//github.com/apachecn/spark-doc-zh/">参与编辑</a></li>
+                                    <li><a href="//github.com/apachecn/spark-doc-zh/#%E8%B4%9F%E8%B4%A3%E4%BA%BA">联系负责人</a></li>
+                                    <li><a href="//github.com/apachecn/spark-doc-zh/#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系方式</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="//github.com/apachecn/spark-doc-zh/blob/master/README.md#%E8%B4%A1%E7%8C%AE%E8%80%85" target="_blank">贡献者</a>
                             </li>
                         </ul>
                         <!--<p class="navbar-text pull-right"><span class="version-text">v{{site.SPARK_VERSION_SHORT}}</span></p>-->
@@ -198,6 +240,15 @@
             {% endif %}
              <!-- /container -->
         </div>
+        
+        <br/><hr class="container-wrapper" style="height:1px;border:none;border-top:1px solid #00FFFF;"/>
+        <div class="container-wrapper"> 
+            <font color="#FF0000">欢迎参与一起维护迭代更新.</font><br/>
+            <a href="//www.apachecn.org">ApacheCN</a>&nbsp;-&nbsp;<font color="#FF0000">if you want to go fast, go alone. if you want to go far, go together.</font><br/>
+            github: <a href="//github.com/apachecn/spark-doc-zh/">https://github.com/apachecn/spark-doc-zh/</a><br/>
+            贡献者: <a href="////github.com/apachecn/spark-doc-zh/blob/master/README.md#%E8%B4%A1%E7%8C%AE%E8%80%85">https://github.com/apachecn/spark-doc-zh/blob/master/README.md#贡献者</a><br/>
+            QQ群: 214293307<br/>
+        </div>
 
         <script src="js/vendor/jquery-1.8.0.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
@@ -206,19 +257,20 @@
 
         <!-- apachecn menu script -->
         <script>
-            $("a.nav-item").on('mouseover', function () {
+
+            $("#apachecn-spark-menu .nav-item").on('mouseover', function () {
                 $(this).children(".nav-itme__list.animate").addClass('active')
             });
 
-            $("a.nav-item").on('mouseout', function () {
-            $(this).children(".nav-itme__list.animate").removeClass('active')
+            $("#apachecn-spark-menu .nav-item").on('mouseout', function () {
+                $(this).children(".nav-itme__list.animate").removeClass('active')
             })
 
-            $(".second-level").on('mouseover', function () {
+            $("#apachecn-spark-menu .second-level").on('mouseover', function () {
                 $(this).children(".nav-itme__list.animate").addClass('active')
             });
 
-            $(".second-level").on('mouseout', function () {
+            $("#apachecn-spark-menu .second-level").on('mouseout', function () {
                 $(this).children(".nav-itme__list.animate").removeClass('active')
             });
 
@@ -239,6 +291,38 @@
                 }
                 init_scroll_position = scroll_top;
             });
+        </script>
+
+        <!-- google-analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-102475051-3', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <!-- baidu tongji -->
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f7dab0206159e5b082b62c0c42528a30";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?3cf78c4e16d1962985911db962821405";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+            })();
         </script>
 
         <!-- MathJax Section -->
